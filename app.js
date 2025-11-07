@@ -1,24 +1,24 @@
 'use strict';
 
 //Selectors
-const addition = document.querySelector('.addition').value;
-const subtraction = document.querySelector('.subtraction').value;
-const multiplication = document.querySelector('.multiplication').value;
-const division = document.querySelector('.division').value;
+const addition = document.querySelector('.addition');
+const subtraction = document.querySelector('.subtraction');
+const multiplication = document.querySelector('.multiplication');
+const division = document.querySelector('.division');
 const screen = document.querySelector('.screen');
 
 //numbers
 const one = document.querySelector('.one');
-const two = Number(document.querySelector('.two').value);
-const three = Number(document.querySelector('.three').value);
-const four = Number(document.querySelector('.four').value);
-const five = Number(document.querySelector('.five').value);
-const six = Number(document.querySelector('.six').value);
-const seven = Number(document.querySelector('.seven').value);
-const eight = Number(document.querySelector('.eight').value);
-const nine = Number(document.querySelector('.nine').value);
-const zero = Number(document.querySelector('.zero').value);
-const point = document.querySelector('.point').value;
+const two = document.querySelector('.two');
+const three = document.querySelector('.three');
+const four = document.querySelector('.four');
+const five = document.querySelector('.five');
+const six = document.querySelector('.six');
+const seven = document.querySelector('.seven');
+const eight = document.querySelector('.eight');
+const nine = document.querySelector('.nine');
+const zero = document.querySelector('.zero');
+const point = document.querySelector('.point');
 const clear = document.querySelector('.clear');
 const equals = document.querySelector('.equals');
 console.log(screen.textContent);
@@ -56,7 +56,7 @@ function input() {} //?
 //     }
 // }
 // one.addEventListener('click', () => {
-//     const numberOne = Number(one.value);
+//     const numberOne = one
 //     checkForX(numberOne);
 // });
 // c
