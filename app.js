@@ -21,12 +21,25 @@ const zero = document.querySelector('.zero');
 const point = document.querySelector('.point');
 const clear = document.querySelector('.clear');
 const equals = document.querySelector('.equals');
-console.log(screen.textContent);
-if (screen.textContent === '') {
-    console.log('no text');
-} else {
-    console.log('text present');
+
+let currentDisplayValue = '';
+console.log(currentDisplayValue);
+function render() {
+    screen.textContent = currentDisplayValue;
 }
+one.addEventListener('click', function () {
+    //1. on click, get the value update the currend dispaly value to the value
+    const clickedValue = one.value;
+    console.log(clickedValue);
+    if (currentDisplayValue === '') {
+        currentDisplayValue = clickedValue;
+    } else {
+        currentDisplayValue += clickedValue;
+    }
+    render();
+});
+render();
+
 /*
 Breakdown
 1. input a value (number)
