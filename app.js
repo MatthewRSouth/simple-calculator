@@ -43,22 +43,22 @@ once a number is pressed, make a function that checks if the textContent is empt
 
 //This will only work for single values right now.
 */
-
-let x;
-let y;
-let equation;
-function checkForX(number) {
-    if (screen.textContent === '') {
-        x = number;
-        x.concat('', equation);
-    } else {
-        y = number;
-    }
-}
-one.addEventListener('click', () => {
-    const numberOne = Number(one.value);
-    checkForX(numberOne);
-});
+function input() {} //?
+// let x;
+// let y;
+// let equation;
+// function checkForX(number) {
+//     if (screen.textContent === '') {
+//         x = number;
+//         x.concat('', equation);
+//     } else {
+//         y = number;
+//     }
+// }
+// one.addEventListener('click', () => {
+//     const numberOne = Number(one.value);
+//     checkForX(numberOne);
+// });
 // c
 
 //button pressed function
