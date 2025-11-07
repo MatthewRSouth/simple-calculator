@@ -27,6 +27,7 @@ console.log(currentDisplayValue);
 function render() {
     screen.textContent = currentDisplayValue;
 }
+//Make displayValue in to a function
 one.addEventListener('click', function () {
     //1. on click, get the value update the currend dispaly value to the value
     const clickedValue = one.value;
