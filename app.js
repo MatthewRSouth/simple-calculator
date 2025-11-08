@@ -9,36 +9,41 @@ const screen = document.querySelector('.screen');
 
 //numbers
 const one = document.querySelector('.one');
-const two = document.querySelector('.two');
-const three = document.querySelector('.three');
-const four = document.querySelector('.four');
-const five = document.querySelector('.five');
-const six = document.querySelector('.six');
-const seven = document.querySelector('.seven');
-const eight = document.querySelector('.eight');
-const nine = document.querySelector('.nine');
-const zero = document.querySelector('.zero');
+// const two = document.querySelector('.two');
+// const three = document.querySelector('.three');
+// const four = document.querySelector('.four');
+// const five = document.querySelector('.five');
+// const six = document.querySelector('.six');
+// const seven = document.querySelector('.seven');
+// const eight = document.querySelector('.eight');
+// const nine = document.querySelector('.nine');
+// const zero = document.querySelector('.zero');
+const numbers = document.querySelectorAll('.number');
 const point = document.querySelector('.point');
 const clear = document.querySelector('.clear');
 const equals = document.querySelector('.equals');
 
 let currentDisplayValue = '';
-console.log(currentDisplayValue);
+
+numbers.forEach((number) => {
+    number.addEventListener('click', function () {
+        //1. on click, get the value update the currend dispaly value to the value
+        const clickedValue = number.value;
+        console.log(clickedValue);
+        if (currentDisplayValue === '') {
+            currentDisplayValue = clickedValue;
+        } else {
+            currentDisplayValue += clickedValue;
+        }
+        render();
+    });
+});
+
 function render() {
     screen.textContent = currentDisplayValue;
 }
 //Make displayValue in to a function
-one.addEventListener('click', function () {
-    //1. on click, get the value update the currend dispaly value to the value
-    const clickedValue = one.value;
-    console.log(clickedValue);
-    if (currentDisplayValue === '') {
-        currentDisplayValue = clickedValue;
-    } else {
-        currentDisplayValue += clickedValue;
-    }
-    render();
-});
+
 render();
 
 /*
@@ -57,7 +62,7 @@ once a number is pressed, make a function that checks if the textContent is empt
 
 //This will only work for single values right now.
 */
-function input() {} //?
+// function input() {} //?
 // let x;
 // let y;
 // let equation;
@@ -121,4 +126,3 @@ function input() {} //?
 // }
 
 // let equation = `${x} ${operand(operandButton)} ${y}`;
-// screen.textContent = equation;
