@@ -24,6 +24,10 @@ const clear = document.querySelector('.clear');
 const equals = document.querySelector('.equals');
 
 let currentDisplayValue = '';
+clear.addEventListener('click', () => {
+    currentDisplayValue = '';
+    render();
+});
 
 numbers.forEach((number) => {
     number.addEventListener('click', function () {
