@@ -8,6 +8,7 @@ const division = document.querySelector('.division');
 const screen = document.querySelector('.screen');
 
 //numbers
+
 const operators = document.querySelectorAll('.operator');
 const numbers = document.querySelectorAll('.number');
 const point = document.querySelector('.point');
@@ -22,6 +23,14 @@ clear.addEventListener('click', () => {
     currentDisplayValue = '';
     selectedOperator = null;
     previousInput = '';
+    render();
+});
+point.addEventListener('click', () => {
+    if (currentDisplayValue.includes('.')) {
+        currentDisplayValue += '';
+    } else {
+        currentDisplayValue += '.';
+    }
     render();
 });
 
