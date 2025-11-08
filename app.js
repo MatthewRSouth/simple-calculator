@@ -8,16 +8,6 @@ const division = document.querySelector('.division');
 const screen = document.querySelector('.screen');
 
 //numbers
-const one = document.querySelector('.one');
-// const two = document.querySelector('.two');
-// const three = document.querySelector('.three');
-// const four = document.querySelector('.four');
-// const five = document.querySelector('.five');
-// const six = document.querySelector('.six');
-// const seven = document.querySelector('.seven');
-// const eight = document.querySelector('.eight');
-// const nine = document.querySelector('.nine');
-// const zero = document.querySelector('.zero');
 const operators = document.querySelectorAll('.operator');
 const numbers = document.querySelectorAll('.number');
 const point = document.querySelector('.point');
@@ -30,6 +20,8 @@ let previousInput;
 
 clear.addEventListener('click', () => {
     currentDisplayValue = '';
+    selectedOperator = null;
+    previousInput = '';
     render();
 });
 
@@ -40,7 +32,6 @@ operators.forEach((operator) => {
 
         selectedOperator = operator.value;
         previousInput = currentDisplayValue;
-        render();
     });
 });
 
@@ -66,6 +57,18 @@ equals.addEventListener('click', function () {
     const currentDisplayValueNumber = Number(currentDisplayValue);
     if (selectedOperator === '+') {
         const answer = previousInputNumber + currentDisplayValueNumber;
+        currentDisplayValue = answer;
+        render();
+    } else if (selectedOperator === '-') {
+        const answer = previousInputNumber - currentDisplayValueNumber;
+        currentDisplayValue = answer;
+        render();
+    } else if (selectedOperator === 'x') {
+        const answer = previousInputNumber * currentDisplayValueNumber;
+        currentDisplayValue = answer;
+        render();
+    } else if (selectedOperator === '÷') {
+        const answer = previousInputNumber / currentDisplayValueNumber;
         currentDisplayValue = answer;
         render();
     }
